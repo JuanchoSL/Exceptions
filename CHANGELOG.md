@@ -1,7 +1,7 @@
 # Change Log Exceptions
 
 
-## [1.0.0] - 
+## [1.0.0] - 2023-03-16
 
 ### Added
 
