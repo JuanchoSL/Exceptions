@@ -1,0 +1,26 @@
+{
+    "name": "juanchosl/exceptions",
+    "description": "A small, lightweight collection of Exceptions that are using the standard values for use on requests",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/JuanchoSL/Exceptions",
+    "minimum-stability": "stable",
+    "keywords": [
+        "exceptions"
+    ],
+    "authors": [
+        {
+            "name": "Juan Sánchez Lecegui",
+            "email": "JuanchoSL@hotmail.com",
+            "homepage": "https://github.com/JuanchoSL/"
+        }
+    ],
+    "require": {
+        "php": "^7.1 || ^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JuanchoSL\\Exceptions\\": "src/"
+        }
+    }
+}
