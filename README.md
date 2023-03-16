@@ -1,13 +1,13 @@
-# DataExtractor
+# Exceptions
 
 ## Description
-A small, lightweight utility to read values and properties from distinct sources using the same methodology
+A small, lightweight collection of Exceptions that are using the standard values for use on requests
 
 
 ## Install
 ```
-composer require juanchosl/dataextractor
+composer require juanchosl/exceptions
 ```
 
 ## How use it
-Load composer autoload and use the JuanchoSL\DataExtractor\{SOURCE_READER} class
+Load composer autoload and use the JuanchoSL\Exceptions\{EXCEPTION} class
