@@ -1,16 +1,16 @@
 <?php
 
-
 namespace JuanchoSL\Exceptions;
 
-class ServiceUnavailableException extends \Exception
-{
+use Exception;
+use JuanchoSL\HttpHeaders\Constants\Status\Codes;
 
-    const CODE = 503;
+class ServiceUnavailableException extends Exception
+{
 
     public function __construct(string $message)
     {
-        parent::__construct($message, self::CODE, null);
+        parent::__construct($message, Codes::SERVICE_UNAVAILABLE);
     }
 
 }

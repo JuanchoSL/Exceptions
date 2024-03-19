@@ -3,13 +3,13 @@
 namespace JuanchoSL\Exceptions;
 
 use Exception;
+use JuanchoSL\HttpHeaders\Constants\Status\Codes;
 
 class UnauthorizedException extends Exception
 {
-    const CODE = 401;
 
     public function __construct(string $message)
     {
-        parent::__construct($message, self::CODE);
+        parent::__construct($message, Codes::UNAUTHORIZED);
     }
 }

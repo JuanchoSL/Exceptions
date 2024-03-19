@@ -2,14 +2,15 @@
 
 namespace JuanchoSL\Exceptions;
 
-class BadRequestException extends \Exception
-{
+use Exception;
+use JuanchoSL\HttpHeaders\Constants\Status\Codes;
 
-    const CODE = 400;
+class BadRequestException extends Exception
+{
 
     public function __construct(string $message)
     {
-        parent::__construct($message, self::CODE);
+        parent::__construct($message, Codes::BAD_REQUEST);
     }
 
 }
