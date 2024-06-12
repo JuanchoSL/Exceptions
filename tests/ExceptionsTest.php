@@ -7,8 +7,10 @@ use JuanchoSL\Exceptions\ConflictException;
 use JuanchoSL\Exceptions\DestinationUnreachableException;
 use JuanchoSL\Exceptions\ExpectationFailedException;
 use JuanchoSL\Exceptions\ForbiddenException;
+use JuanchoSL\Exceptions\MethodNotAllowedException;
 use JuanchoSL\Exceptions\NotFoundException;
 use JuanchoSL\Exceptions\NotModifiedException;
+use JuanchoSL\Exceptions\PaymentRequiredException;
 use JuanchoSL\Exceptions\PreconditionFailedException;
 use JuanchoSL\Exceptions\PreconditionRequiredException;
 use JuanchoSL\Exceptions\RangeNotSatisfiableException;
@@ -21,47 +23,66 @@ use PHPUnit\Framework\TestCase;
 class ExceptionsTest extends TestCase
 {
 
+    public function testNotModifiedException()
+    {
+        $this->expectException(NotModifiedException::class);
+        $this->expectExceptionCode(304);
+        throw new NotModifiedException("Launch exception");
+    }
     public function testBadRequestException()
     {
         $this->expectException(BadRequestException::class);
         $this->expectExceptionCode(400);
         throw new BadRequestException("Launch exception");
     }
-    public function testConflictException()
+
+    public function testUnauthorizedException()
     {
-        $this->expectException(ConflictException::class);
-        $this->expectExceptionCode(409);
-        throw new ConflictException("Launch exception");
+        $this->expectException(UnauthorizedException::class);
+        $this->expectExceptionCode(401);
+        throw new UnauthorizedException("Launch exception");
     }
-    public function testDestinationUnreachableException()
+
+    public function testPaymentRequiredException()
     {
-        $this->expectException(DestinationUnreachableException::class);
-        $this->expectExceptionCode(408);
-        throw new DestinationUnreachableException("Launch exception");
+        $this->expectException(PaymentRequiredException::class);
+        $this->expectExceptionCode(402);
+        throw new PaymentRequiredException("Launch exception");
     }
-    public function testExpectationFailedException()
-    {
-        $this->expectException(ExpectationFailedException::class);
-        $this->expectExceptionCode(417);
-        throw new ExpectationFailedException("Launch exception");
-    }
+
     public function testForbiddenException()
     {
         $this->expectException(ForbiddenException::class);
         $this->expectExceptionCode(403);
         throw new ForbiddenException("Launch exception");
     }
+
     public function testNotFoundException()
     {
         $this->expectException(NotFoundException::class);
         $this->expectExceptionCode(404);
         throw new NotFoundException("Launch exception");
     }
-    public function testNotModifiedException()
+
+    public function testMethodNotAllowedException()
     {
-        $this->expectException(NotModifiedException::class);
-        $this->expectExceptionCode(304);
-        throw new NotModifiedException("Launch exception");
+        $this->expectException(MethodNotAllowedException::class);
+        $this->expectExceptionCode(405);
+        throw new MethodNotAllowedException("Launch exception");
+    }
+
+    public function testDestinationUnreachableException()
+    {
+        $this->expectException(DestinationUnreachableException::class);
+        $this->expectExceptionCode(408);
+        throw new DestinationUnreachableException("Launch exception");
+    }
+
+    public function testConflictException()
+    {
+        $this->expectException(ConflictException::class);
+        $this->expectExceptionCode(409);
+        throw new ConflictException("Launch exception");
     }
     public function tesPreconditionFailedException()
     {
@@ -69,11 +90,12 @@ class ExceptionsTest extends TestCase
         $this->expectExceptionCode(412);
         throw new PreconditionFailedException("Launch exception");
     }
-    public function tesPreconditionRequiredException()
+
+    public function UnsupportedMediaTypeException()
     {
-        $this->expectException(PreconditionRequiredException::class);
-        $this->expectExceptionCode(418);
-        throw new PreconditionRequiredException("Launch exception");
+        $this->expectException(UnsupportedMediaTypeException::class);
+        $this->expectExceptionCode(415);
+        throw new UnsupportedMediaTypeException("Launch exception");
     }
     public function testRangeNotSatisfiableException()
     {
@@ -81,29 +103,31 @@ class ExceptionsTest extends TestCase
         $this->expectExceptionCode(416);
         throw new RangeNotSatisfiableException("Launch exception");
     }
-    public function testServiceUnavailableException()
+    public function testExpectationFailedException()
     {
-        $this->expectException(ServiceUnavailableException::class);
-        $this->expectExceptionCode(503);
-        throw new ServiceUnavailableException("Launch exception");
+        $this->expectException(ExpectationFailedException::class);
+        $this->expectExceptionCode(417);
+        throw new ExpectationFailedException("Launch exception");
     }
-    public function testUnauthorizedException()
-    {
-        $this->expectException(UnauthorizedException::class);
-        $this->expectExceptionCode(401);
-        throw new UnauthorizedException("Launch exception");
-    }
+
     public function testUnprocessableEntityException()
     {
         $this->expectException(UnprocessableEntityException::class);
         $this->expectExceptionCode(422);
         throw new UnprocessableEntityException("Launch exception");
     }
-    public function UnsupportedMediaTypeException()
+
+    public function testPreconditionRequiredException()
     {
-        $this->expectException(UnsupportedMediaTypeException::class);
-        $this->expectExceptionCode(415);
-        throw new UnsupportedMediaTypeException("Launch exception");
+        $this->expectException(PreconditionRequiredException::class);
+        $this->expectExceptionCode(428);
+        throw new PreconditionRequiredException("Launch exception");
     }
 
+    public function testServiceUnavailableException()
+    {
+        $this->expectException(ServiceUnavailableException::class);
+        $this->expectExceptionCode(503);
+        throw new ServiceUnavailableException("Launch exception");
+    }
 }

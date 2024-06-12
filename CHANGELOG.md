@@ -1,6 +1,20 @@
 # Change Log Exceptions
 
 
+## [1.0.4] - 2024-06-12
+
+### Added
+
+- MethodNotAllowedException
+- PaymentRequiresException
+
+### Changed
+
+- Use status codes in order to use from related Exceptions
+
+### Fixed
+
+
 ## [1.0.3] - 2023-06-15
 
 ### Added
