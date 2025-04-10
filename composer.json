@@ -1,6 +1,6 @@
 {
     "name": "juanchosl/exceptions",
-    "description": "A small, lightweight collection of Exceptions that are using the standard values for use on requests",
+    "description": "A small, lightweight collection of Exceptions that are using the standard status codes for use on requests",
     "type": "library",
     "license": "MIT",
     "homepage": "https://github.com/JuanchoSL/Exceptions",
@@ -17,7 +17,7 @@
     ],
     "require": {
         "php": "^7.1 || ^8.0",
-        "juanchosl/httpheaders": "1.0.*"
+        "fig/http-message-util": "1.1.*"
     },    
     "require-dev": {
         "phpunit/phpunit": "9.6.*"

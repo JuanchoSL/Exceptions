@@ -7,8 +7,10 @@ use JuanchoSL\Exceptions\ConflictException;
 use JuanchoSL\Exceptions\DestinationUnreachableException;
 use JuanchoSL\Exceptions\ExpectationFailedException;
 use JuanchoSL\Exceptions\ForbiddenException;
+use JuanchoSL\Exceptions\LockedException;
 use JuanchoSL\Exceptions\MethodNotAllowedException;
 use JuanchoSL\Exceptions\NotFoundException;
+use JuanchoSL\Exceptions\NotImplementedException;
 use JuanchoSL\Exceptions\NotModifiedException;
 use JuanchoSL\Exceptions\PaymentRequiredException;
 use JuanchoSL\Exceptions\PreconditionFailedException;
@@ -129,5 +131,19 @@ class ExceptionsTest extends TestCase
         $this->expectException(ServiceUnavailableException::class);
         $this->expectExceptionCode(503);
         throw new ServiceUnavailableException("Launch exception");
+    }
+
+    public function testNotImplementedException()
+    {
+        $this->expectException(NotImplementedException::class);
+        $this->expectExceptionCode(501);
+        throw new NotImplementedException("Launch exception");
+    }
+
+    public function testLockedException()
+    {
+        $this->expectException(LockedException::class);
+        $this->expectExceptionCode(423);
+        throw new LockedException("Launch exception");
     }
 }

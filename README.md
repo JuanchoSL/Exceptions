@@ -1,7 +1,7 @@
 # Exceptions
 
 ## Description
-A small, lightweight collection of Exceptions that are using the standard values for use on requests
+A small, lightweight collection of Exceptions that are using the standard status codes for use on requests
 
 
 ## Install
@@ -17,3 +17,25 @@ if(!files_exists($full_path)){
     throw new NotFoundException("The file '{$full_path}' does not exists");
 }
 ```
+## Available Code exceptions
+
+| Code | Class                          |
+| ---- |:-------------------------------|
+| 304 | NotModifiedException            |
+| 400 | BadRequestException             |
+| 401 | UnauthorizedException           |
+| 402 | PaymentRequiredException        |
+| 403 | ForbiddenException              |
+| 404 | NotFoundException               |
+| 405 | MethodNotAllowedException       |
+| 408 | DestinationUnreachableException |
+| 409 | ConflictException               |
+| 412 | PreconditionFailedException     |
+| 415 | UnsupportedMediaTypeException   |
+| 416 | RangeNotSatisfiableException    |
+| 417 | ExpectationFailedException      |
+| 422 | UnprocessableEntityException    |
+| 423 | LockedException                 |
+| 428 | PreconditionRequiredException   |
+| 501 | NotImplementedException         |
+| 503 | ServiceUnavailableException     |
