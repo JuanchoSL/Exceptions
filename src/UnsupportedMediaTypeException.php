@@ -1,17 +1,15 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 namespace JuanchoSL\Exceptions;
 
 use Exception;
-use JuanchoSL\HttpHeaders\Constants\Status\Codes;
+use Fig\Http\Message\StatusCodeInterface;
 
 class UnsupportedMediaTypeException extends Exception
 {
 
     public function __construct(string $message)
     {
-        parent::__construct($message, Codes::UNSUPPORTED_MEDIA_TYPE);
+        parent::__construct($message, StatusCodeInterface::STATUS_UNSUPPORTED_MEDIA_TYPE);
     }
 }

@@ -6,13 +6,13 @@ namespace JuanchoSL\Exceptions;
 
 use Exception;
 use Fig\Http\Message\StatusCodeInterface;
-use JuanchoSL\HttpHeaders\Constants\Status\Codes;
 
-class ForbiddenException extends Exception
+class NotImplementedException extends Exception
 {
 
     public function __construct(string $message)
     {
-        parent::__construct($message, StatusCodeInterface::STATUS_FORBIDDEN);
+        parent::__construct($message, StatusCodeInterface::STATUS_NOT_IMPLEMENTED);
     }
+
 }
