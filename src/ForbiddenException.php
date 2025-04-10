@@ -1,12 +1,9 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 namespace JuanchoSL\Exceptions;
 
 use Exception;
 use Fig\Http\Message\StatusCodeInterface;
-use JuanchoSL\HttpHeaders\Constants\Status\Codes;
 
 class ForbiddenException extends Exception
 {
