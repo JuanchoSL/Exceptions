@@ -1,6 +1,20 @@
 # Change Log Exceptions
 
 
+## [1.0.5] - 2025-05-23
+
+### Added
+- NotiImplementedException
+- LockedException
+
+### Changed
+- Updated phpunit
+- Use StatusCodesInterface from FIG-PHP instead httpheaders library
+
+### Fixed
+- Checked php 8.4 compatibility
+
+
 ## [1.0.4] - 2024-06-12
 
 ### Added
