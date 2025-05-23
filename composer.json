@@ -4,7 +4,6 @@
     "type": "library",
     "license": "MIT",
     "homepage": "https://github.com/JuanchoSL/Exceptions",
-    "minimum-stability": "stable",
     "keywords": [
         "exceptions"
     ],
